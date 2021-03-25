@@ -4,9 +4,9 @@ require "../BaseMapClass/Helper.php";
 
 
 session_start();
-$message = "Войдите для просмотра";
+$message = "Заполните все поля!";
 if (empty($_POST['login']) ||  empty($_POST['password'])) {
-   
+   $_SESSION['message'] = $message;
     header("Location: login.php");
     exit;
 }
@@ -24,9 +24,10 @@ else if ($_POST['login'] && $_POST['password']) {
 
     // // если пароль и логин верные
     if ($return ==  "неверный пароль" || $return=="неверно все") {
-        $message = "Войдите для просмотра";
+        $message = "Неверный логин или пароль";
+        $_SESSION['message'] = $message;
         header("Location: login.php");
-        exit;
+        exit();
     }
     if ($return != "ничего нет") {
         $_SESSION['id'] = $return->id;

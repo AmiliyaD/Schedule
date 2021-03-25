@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if ($_SESSION['message']) {
+    echo $_SESSION['message'];
+    session_destroy();
+}
+?>
 <!DOCTYPE html>
 <html>
 
