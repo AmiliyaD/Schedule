@@ -53,11 +53,7 @@ require 'head.php' ?>
 <div class="row md-2">
 <div class="col-md-6">
   
-<?php if ($_SESSION['message']): ?>
-<b> <?=$_SESSION['message'] ?></b>
-
-<?php unset($_SESSION['message']) ?>
-<?php endif; ?>
+<?php require "sessionFlash.php" ?>
 
 </div>
 

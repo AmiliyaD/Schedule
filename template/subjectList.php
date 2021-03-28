@@ -35,11 +35,7 @@ $get = $subject->arrSubject();
 
 <div class="row md-2 mt-5">
 <div class="col-md-12">
-<?php if ($_SESSION['message']): ?>
-<b> <?=$_SESSION['message'] ?></b>
-
-<?php unset($_SESSION['message']) ?>
-<?php endif; ?>
+<?php require "sessionFlash.php" ?>
 <table class="table">
   <thead>
     <tr>
