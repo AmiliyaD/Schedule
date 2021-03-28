@@ -10,13 +10,13 @@ require 'head.php' ?>
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Главная</h1>
+            <h1 class="m-0 text-dark">Добавить новую группу</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="index.php">Домой</a></li>
-            <li class="breadcrumb-item "><a href="studentList.php">Группы</a></li>
-            <li class="breadcrumb-item "><a href="studentAdd.php">Добавить новую</a></li>
+            <li class="breadcrumb-item "><a href="gruppaList.php">Группы</a></li>
+            <li class="breadcrumb-item "><a href="gruppaAdd.php">Добавить новую</a></li>
             </ol>
 
             

@@ -17,7 +17,7 @@ $get = $class->arrClassroom();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="index.php">Домой</a></li>
-            <li class="mr-2 breadcrumb-item"><a href="subjectList.php">Аудитории</a></li>
+            <li class="mr-2 breadcrumb-item"><a href="classroomList.php">Аудитории</a></li>
           
             </ol>
 
@@ -29,7 +29,7 @@ $get = $class->arrClassroom();
         <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
           
-            <a href="classroomAdd.php" class='btn btn-success'>Добавить нового</a>
+            <a href="classroomAdd.php" class='btn btn-success'>Добавить новую</a>
            
             <?php endif; ?></div></div>
 

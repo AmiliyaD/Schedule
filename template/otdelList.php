@@ -29,7 +29,7 @@ $get = $gruppa->otdel();
         <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
           
-            <a href="otdelAdd.php" class='btn btn-success'>Добавить нового</a>
+            <a href="otdelAdd.php" class='btn btn-success'>Добавить новый</a>
            
             <?php endif; ?></div></div>
 

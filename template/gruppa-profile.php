@@ -22,6 +22,7 @@ $findProfile = $get->findGruppaById($_GET['id']);
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Домой</a></li>
               <li class="breadcrumb-item "><a href="gruppaList.php">Группы</a></li>
+              
               <li class="breadcrumb-item "><a href="gruppa-profile.php">Просмотр группы</a></li>
             </ol>
 

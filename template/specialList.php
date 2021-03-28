@@ -29,7 +29,7 @@ $get = $special->allSpecials();
         <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
           
-            <a href="specialAdd.php" class='btn btn-success'>Добавить нового</a>
+            <a href="specialAdd.php" class='btn btn-success'>Добавить новую</a>
            
             <?php endif; ?></div></div>
 

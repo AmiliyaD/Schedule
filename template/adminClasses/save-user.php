@@ -30,7 +30,7 @@ if (isset($_POST['user_id'])) {
 
     $map = new UserMap;
     $getMap= $map->save($user);
- 
+
     // ЕСЛИ ЕСТЬ saveStudent
    if (isset($_POST['saveStudent'])) {
        $student = new Student;

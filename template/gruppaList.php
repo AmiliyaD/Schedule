@@ -17,7 +17,7 @@ $get = $gruppa->arrGruppas();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="index.php">Домой</a></li>
-            <li class="mr-2 breadcrumb-item"><a href="studentList.php">Группы</a></li>
+            <li class="mr-2 breadcrumb-item"><a href="gruppaList.php">Группы</a></li>
           
             </ol>
 
@@ -29,7 +29,7 @@ $get = $gruppa->arrGruppas();
         <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
           
-            <a href="gruppaAdd.php" class='btn btn-success'>Добавить нового</a>
+            <a href="gruppaAdd.php" class='btn btn-success'>Добавить новую</a>
            
             <?php endif; ?></div></div>
 

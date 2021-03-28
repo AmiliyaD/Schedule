@@ -28,7 +28,7 @@ require 'head.php' ?>
           <div class="w-100"></div>
           <a href="studentList.php" class="nav-link nav-grups">Список студентов </a>
 <div class="w-100"></div>
-          <b class="color-white">Справочники</b></li>
+          <li class="mt-3"><b class="">Справочники</b></li>
           <a href="gruppaList.php" class="nav-link nav-grups">Список групп</a>
           <a href="otdelList.php" class="nav-link nav-grups">Список отделов</a>
           <a href="specialList.php" class="nav-link nav-grups">Список специальностей</a>
