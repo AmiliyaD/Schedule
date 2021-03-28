@@ -15,7 +15,7 @@ require 'head.php' ?>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="index.php">Домой</a></li>
-            <li class="breadcrumb-item "><a href="studentList.php">Студенты</a></li>
+            <li class="breadcrumb-item "><a href="studentList.php">Предметы</a></li>
             <li class="breadcrumb-item "><a href="studentAdd.php">Добавить нового</a></li>
             </ol>
 
@@ -35,7 +35,7 @@ require 'head.php' ?>
         
         <form action="adminClasses/save-user.php" method="post">
         
-        <?php require "adminClasses/add-student.php" ?>
+        <?php require "adminClasses/add-subject.php" ?>
      
         </form>
            

@@ -1,9 +1,12 @@
 <?php 
 require_once "../BaseMapClass/TeacherMap.php";
 require_once "../BaseMapClass/UserMap.php";
+require_once "../BaseMapClass/SpecialMap.php";
 require_once "../BaseMapClass/StudentMap.php";
 require_once "../BaseMapClass/ClassroomMap.php";
 require_once "../BaseMapClass/GruppaMap.php";
+require_once "../BaseMapClass/OtdelMap.php";
+require_once "../BaseMapClass/SubjectMap.php";
 ?>
 <!DOCTYPE html>
 

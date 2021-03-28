@@ -15,8 +15,8 @@ require 'head.php' ?>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="index.php">Домой</a></li>
-            <li class="breadcrumb-item "><a href="studentList.php">Студенты</a></li>
-            <li class="breadcrumb-item "><a href="studentAdd.php">Добавить нового</a></li>
+            <li class="breadcrumb-item "><a href="studentList.php">Группы</a></li>
+            <li class="breadcrumb-item "><a href="studentAdd.php">Добавить новую</a></li>
             </ol>
 
             
@@ -24,22 +24,20 @@ require 'head.php' ?>
         </div><!-- /.row -->
         <div class="row md-2">
         <div class="col-md-6">
-        <?php if ($_SESSION['message']): ?>
-<b> <?=$_SESSION['message'] ?></b>
-
-<?php unset($_SESSION['message']) ?>
-<?php endif; ?>
-
         <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
         
-        <form action="adminClasses/save-user.php" method="post">
+        <form action="adminClasses/save-gruppa.php" method="post">
         
-        <?php require "adminClasses/add-student.php" ?>
+        <?php require "adminClasses/add-gruppa.php" ?>
      
         </form>
            
-            <?php endif; ?></div></div>
+            <?php endif; ?>
+            
+            </div>
+            
+            </div>
       </div><!-- /.container-fluid -->
     </div>
     

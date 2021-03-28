@@ -8,7 +8,7 @@ class TeacherMap extends BaseMap {
     {
         $ofset = 0;
         $limit = 30;
-        $teach = $this->db->query("SELECT * FROM teacher INNER JOIN user ON teacher.user_id = user.user_id INNER JOIN gender ON user.gender_id = gender.id INNER JOIN otdel ON otdel.id = teacher.otdel_id INNER JOIN role ON role.id = user.role_id LIMIT $ofset, $limit")->fetchAll();
+        $teach = $this->db->query("SELECT * FROM teacher INNER JOIN user ON teacher.user_id = user.user_id INNER JOIN gender ON user.gender_id = gender.id INNER JOIN otdel ON  teacher.otdel_id =  otdel.id INNER JOIN role ON  user.role_id  = role.id LIMIT $ofset, $limit")->fetchAll();
        
         return $teach;
     }
