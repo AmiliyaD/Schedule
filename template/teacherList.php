@@ -1,6 +1,8 @@
 <?php
 session_start();
+require "adminClasses/secure.php";
 require "../BaseMapClass/TeacherMap.php";
+require "../BaseMapClass/Helper.php";
 $size = 1;
 if (isset($_GET['page'])) {
   $page = $_GET['page'];
@@ -10,7 +12,9 @@ else {
 }
 
 $teacher = new TeacherMap;
-$get = $teacher->allTeachers();
+$get = $teacher->allTeachers($page * $size - $size, $size);
+
+$count = $teacher->count();
 
 require 'head.php' ?>
 
@@ -26,8 +30,8 @@ require 'head.php' ?>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Домой</a></li>
-            <li><a href="list-teacher.php">Преподаватели</a></li>
+            <li class="breadcrumb-item "><a href="index.php">Домой</a></li>
+            <li class="breadcrumb-item" ><a href="list-teacher.php">Преподаватели</a></li>
 
             <!--  -->
           </ol>
@@ -85,8 +89,10 @@ require 'head.php' ?>
     
   </tbody>
 </table>
+<div class="box-body ">
+<?php Helper::paginator($count, $page, $size); ?>
+</div>
 
-<button class="list-btn">1</button>
       </div>
       </div>
     </div><!-- /.container-fluid -->

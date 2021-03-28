@@ -25,6 +25,7 @@ require 'head.php' ?>
         <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
         <a href="teacherList.php">Список преподавателей </a>
+        <div class="w-100"></div>
         <a href="studentList.php">Список студентов </a>
            
             <?php endif; ?></div></div>

@@ -20,8 +20,9 @@ $findProfile = $get->findProfileById($_GET['id']);
         
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Домой</a></li>
-          
+              <li class="breadcrumb-item"><a href="index.php">Домой</a></li>
+              <li class="breadcrumb-item "><a href="studentList.php">Студенты</a></li>
+              <li class="breadcrumb-item "><a href="profile-teacher.php">Профиль студента</a></li>
             </ol>
 
             

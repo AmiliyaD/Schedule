@@ -21,7 +21,8 @@ $get = $student->allStudents();
         
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Домой</a></li>
+            <li class="breadcrumb-item"><a href="index.php">Домой</a></li>
+            <li class="mr-2 breadcrumb-item"><a href="studentList.php">Студенты</a></li>
           
             </ol>
 

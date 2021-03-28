@@ -14,8 +14,9 @@ require 'head.php' ?>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Домой</a></li>
-          
+            <li class="breadcrumb-item "><a href="index.php">Домой</a></li>
+            <li class="breadcrumb-item "><a href="studentList.php">Студенты</a></li>
+            <li class="breadcrumb-item "><a href="studentAdd.php">Добавить нового</a></li>
             </ol>
 
             
