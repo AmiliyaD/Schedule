@@ -16,5 +16,16 @@ public function arrSubject()
          return $res->fetch(PDO::FETCH_ASSOC);
      }
  }
-
+  // Вставить новую строку
+  public function insert(Subject $subject)
+  {
+    $name = $this->db->quote($subject->subjectName);
+    $otdel_id = $this->db->quote($subject->otdel_id);
+    
+      $a = $this->db->exec("INSERT INTO subject (subject.subjectName, subject.otdel_id, subject.hours, subject.active) VALUES ($name, $otdel_id, $subject->hours, $subject->active)");
+      if ($a== 1) {
+  return true;
+  }
+  return false;
+  }
 }

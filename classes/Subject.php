@@ -1,8 +1,8 @@
 <?php
-require_once '../basics/Table.php';
+require_once 'Table.php';
 
 class Subject extends Table {
-    public $name = '';
+    public $subjectName = '';
     public $otdel_id = 0;
     public $hours = 0;
     public $active = 0;

@@ -27,7 +27,7 @@ require 'head.php' ?>
         <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
         
-        <form action="adminClasses/save-gruppa.php" method="post">
+        <form action="adminClasses/save-special.php" method="post">
         
         <?php require "adminClasses/add-classroom.php" ?>
      

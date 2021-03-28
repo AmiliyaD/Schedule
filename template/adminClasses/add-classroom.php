@@ -5,7 +5,7 @@ require_once "../BaseMapClass/OtdelMap.php";
 ?>
 <div class="form-group">
     <label for="">Название аудиторий</label>
-<input type="text" class="form-control" name="otdel_name">
+<input type="text" class="form-control" name="class_name">
 
 </div>
 

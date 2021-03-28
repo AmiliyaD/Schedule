@@ -20,10 +20,10 @@ public function otdel()
 
 
    // Вставить новую строку
-   public function insert($otdelNam, $active)
+   public function insert(Otdel $otdel)
    {
-
-       $a = $this->db->exec("INSERT INTO `otdel` (`otdelName`, `active`) VALUES ($otdelNam, $active)");
+    $otdelName = $this->db->quote($otdel->otdelName);
+       $a = $this->db->exec("INSERT INTO `otdel` (`otdelName`, `active`) VALUES ($otdelName, $otdel->active)");
        if ($a== 1) {
    return true;
    }

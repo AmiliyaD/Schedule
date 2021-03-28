@@ -17,7 +17,9 @@ public function findProfileById($id)
 // Добавить студента
  public function insert(Student $student)
  {
-    if ($this->db->exec("INSERT INTO student(student.user_id,student.gruppa_id, student.num_zach) VALUES($student->user_id, $student->gruppa_id, $student->num_zach)")== 1) {
+    $zach = $this->db->quote($student->num_zach);
+  
+    if ($this->db->exec("INSERT INTO student(student.user_id,student.gruppa_id, student.num_zach) VALUES($student->user_id, $student->gruppa_id, $zach)")== 1) {
         return true;
         }
         return false;

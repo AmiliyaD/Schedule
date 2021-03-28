@@ -10,7 +10,7 @@ require_once "../BaseMapClass/OtdelMap.php";
 </div>
 <div class="form-group">
     <label for="">Название отделения</label>
-    <select class="form-control" name="special_id">
+    <select class="form-control" name="otdel_id">
 <?= Helper::printSelectOptions($gruppa->special_id, (new OtdelMap())->otdel(), 'otdelName');?>
 </select>
 

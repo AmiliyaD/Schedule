@@ -39,6 +39,7 @@ if (isset($_POST['user_id'])) {
        $student->gruppa_id = $_POST['gruppa_id'];
        
        if ((new StudentMap())->insert($student)) {
+        $_SESSION['message'] = "Студент успешно добавлен";
         header("Location: ../studentList.php");
        }
        else {
@@ -50,7 +51,7 @@ if (isset($_POST['saveTeacher'])) {
     $teacher = new Teacher;
     $teacher->otdel_id = Helper::clearInt($_POST['otdel_id']);
     $teacher->user_id = $user->user_id;
-    $_SESSION['message'] = "Студент успешно добавлен";
+  
     // добавляем нового преподавателя
     if( (new TeacherMap())->insert($teacher) ) {
         $_SESSION['message'] = "Преподаватель успешно добавлен!";
