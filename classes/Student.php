@@ -1,5 +1,5 @@
 <?php
-require 'basics/Table.php';
+require_once 'Table.php';
 
 class Student extends Table {
     public $user_id = 0;

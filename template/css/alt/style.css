@@ -1,0 +1,27 @@
+.nav-students:hover {
+    transition: 1s all;
+    color: white;
+    font-size: 15px;
+}
+.nav-prepods:hover {
+    transition: 1s all;
+    color: white;
+    font-size: 15px;
+}
+.nav-students, .nav-prepods {
+    transition: 1s all;
+}
+.list-btn {
+    border: grey 1px solid;
+    border-radius: 5px;
+    transition: 0.5s all;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: none;
+    font-size: 20px;
+    
+}
+.list-btn:hover {
+    background-color: aqua;
+    background-color: aqua;
+}

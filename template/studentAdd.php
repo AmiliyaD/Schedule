@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 require 'head.php' ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -10,22 +11,26 @@ require 'head.php' ?>
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Главная</h1>
-          </div><!-- /.col -->
+          </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Домой</a></li>
-             
+          
             </ol>
 
             
-          </div><!-- /.col -->
+          </div>
         </div><!-- /.row -->
         <div class="row md-2">
         <div class="col-md-6">
         <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
-        <a href="teacherList.php">Список преподавателей </a>
-        <a href="studentList.php">Список студентов </a>
+        
+        <form action="adminClasses/save-user.php" method="post">
+        
+        <?php require "adminClasses/add-student.php" ?>
+     
+        </form>
            
             <?php endif; ?></div></div>
       </div><!-- /.container-fluid -->

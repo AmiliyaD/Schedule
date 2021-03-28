@@ -1,5 +1,5 @@
 <?php
-require 'Config.php';
+require_once 'Config.php';
 
 abstract class BaseMap extends Config {
     protected $db;

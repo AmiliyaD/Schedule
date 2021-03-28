@@ -1,5 +1,5 @@
 <?php
-require 'basics/Table.php';
+require_once 'Table.php';
 
 class Teacher extends Table {
     public $user_id = 0;
@@ -7,6 +7,9 @@ class Teacher extends Table {
     
     public function validate()
     {
+        if (!empty($this->otdel_id)) {
+            return true;
+        }
         return false;
        
     }

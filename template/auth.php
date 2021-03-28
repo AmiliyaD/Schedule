@@ -5,15 +5,16 @@ require "../BaseMapClass/Helper.php";
 
 session_start();
 $message = "Заполните все поля!";
+if($_SESSION['role'] != NULL) {
+    header("Location: index.php");
+    exit;
+}
 if (empty($_POST['login']) ||  empty($_POST['password'])) {
    $_SESSION['message'] = $message;
     header("Location: login.php");
     exit;
 }
-if($_SESSION['role'] != NULL) {
-    header("Location: index.php");
-    exit;
-}
+
 else if ($_POST['login'] && $_POST['password']) {
     $login = Helper::clearString($_POST['login']);
     $password = Helper::clearString($_POST['password']);

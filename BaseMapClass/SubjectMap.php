@@ -1,5 +1,5 @@
 <?php
-require '../basics/BaseMap.php';
+require_once 'BaseMap.php';
 
 class SubjectMap extends BaseMap {
   

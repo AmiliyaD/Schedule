@@ -1,5 +1,5 @@
 <?php
-require 'basics/Table.php';
+require_once '../basics/Table.php';
 
 class Subject extends Table {
     public $name = '';

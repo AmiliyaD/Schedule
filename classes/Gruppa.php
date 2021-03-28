@@ -1,7 +1,7 @@
 <?php
-require 'basics/Table.php';
+require_once '../basics/Table.php';
 
-class Classroom extends Table {
+class Gruppa extends Table {
     public function validate()
     {
         return false;

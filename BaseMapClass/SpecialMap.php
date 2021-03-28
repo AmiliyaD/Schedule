@@ -1,5 +1,5 @@
 <?php
-require '../basics/BaseMap.php';
+require 'BaseMap.php';
 
 class Special extends BaseMap {
   

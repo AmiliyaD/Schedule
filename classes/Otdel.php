@@ -1,7 +1,7 @@
 <?php
-require 'basics/Table.php';
+require_once '../basics/Table.php';
 
-class Special extends Table {
+class Otdel extends Table {
     public function validate()
     {
         return false;

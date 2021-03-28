@@ -10,4 +10,14 @@ class Helper {
     {
         return (int)$str;
     }
+
+    public static function printSelectOptions($key, array $options, $nameOpt)
+
+    {
+        if ($options) {
+            foreach ($options as $option) { ?>
+            <option value="<?=$option['id'];?>" <?=($key ==  $option['id'])?'selected':'';?>><?=$option[$nameOpt]?></option>
+            <?php }
+            }
+    }
 }
