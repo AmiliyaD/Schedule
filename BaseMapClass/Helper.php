@@ -25,7 +25,7 @@ class Helper {
     {
         if ($options) {
             foreach ($options as $option) { ?>
-            <option value="<?=$option['id'];?>" <?=($key ==  $option['id'])?'selected':'';?>><?=$option[$nameOne]?> -> <?=$option[$nameTwo]?></option>
+            <option value="<?=$option[0];?>" <?=($key ==  $option['id'])?'selected':'';?>><?=$option[$nameOne]?> -> <?=$option[$nameTwo]?></option>
             <?php }
             }
     }

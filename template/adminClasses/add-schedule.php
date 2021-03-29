@@ -1,8 +1,10 @@
 <?php
-
+$a = new LessonPlanMap;
+$b = $a->arrPlan($_GET['id']);
+var_dump($b);
 ?>
 
-<form action="save-schedule.php" method="POST">
+<form action="adminClasses/save-schedule.php" method="POST">
     <div class="form-group">
         <label>Группа и предмет</label>
         <select class="form-control" name="lesson_plan_id">
@@ -22,7 +24,7 @@
         </select>
     </div>
     <input type="hidden" name="day_id" value="<?=$idDay;?>" />
-    <input type="hidden" name="user_id" value="<?=$idUser;?>" />
+    <input type="hidden" name="user_id" value="<?=$findProfile['id'];?>" />
     <div class="form-group">
         <button type="submit" name="saveSchedule" class="btn btn-primary">Сохранить</button>
     </div>

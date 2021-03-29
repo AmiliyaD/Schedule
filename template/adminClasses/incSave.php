@@ -11,3 +11,5 @@ require_once "../../BaseMapClass/SpecialMap.php";
 require_once "../../classes/Special.php";
 require_once "../../classes/LessonPlan.php";
 require_once "../../BaseMapClass/LessonPlanMap.php";
+require_once "../../classes/Schedule.php";
+require_once "../../BaseMapClass/ScheduleMap.php";

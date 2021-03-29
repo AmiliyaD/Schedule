@@ -4,7 +4,7 @@ session_start();
 
 require 'head.php';
 $get = new TeacherMap;
-$findProfile = $get->findProfileById($_GET['id']);
+$findProfile = $get->findProfileByUserId($_GET['id']);
 ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

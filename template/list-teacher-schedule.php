@@ -42,8 +42,8 @@ $get = $gruppa->arrPlans();
     
       <th scope="col">Ф.И.О. преподавателя</th>
       <th scope="col">Отделение</th>
-      <th scope="col">Количество пунктов в плане</th>
       <th scope="col">Общее количество часов</th>
+      <th scope="col">Количество пунктов в плане</th>
       <th scope="col"></th>
   
     </tr>

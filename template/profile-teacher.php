@@ -5,7 +5,7 @@ session_start();
 require 'head.php';
 
 $get = new TeacherMap;
-$findProfile = $get->findProfileById($_GET['id']);
+$findProfile = $get->findProfileByUserId($_GET['id']);
 
 ?>
    <?php if($_SESSION['roleName'] == 'Администратор'): ?>
