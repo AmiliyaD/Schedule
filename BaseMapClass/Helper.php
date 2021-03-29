@@ -10,7 +10,7 @@ class Helper {
     {
         return (int)$str;
     }
-
+// ЛУШЧАЯ ФУНКЦИЯ ДЛЯ ВЫВОДА СПИСКА
     public static function printSelectOptions($key, array $options, $nameOpt)
 
     {
@@ -20,7 +20,17 @@ class Helper {
             <?php }
             }
     }
+    public static function printSelectOptionsForSchedule($key, array $options, $nameOne, $nameTwo)
 
+    {
+        if ($options) {
+            foreach ($options as $option) { ?>
+            <option value="<?=$option['id'];?>" <?=($key ==  $option['id'])?'selected':'';?>><?=$option[$nameOne]?> -> <?=$option[$nameTwo]?></option>
+            <?php }
+            }
+    }
+
+    // пагинатор
     public static function paginator($count, $current, $size)
     {
        $current = 1;

@@ -6,7 +6,7 @@
     <div class="form-group">
         <label>Группа и предмет</label>
         <select class="form-control" name="lesson_plan_id">
-            <?= Helper::printSelectOptions(0, (new LessonPlanMap())->arrPlan($_GET['id']), 'id');?>
+            <?= Helper::printSelectOptionsForSchedule(0, (new LessonPlanMap())->arrPlan($_GET['id']), 'gruppaName', 'subjectName');?>
         </select>
     </div>
     <div class="form-group">
