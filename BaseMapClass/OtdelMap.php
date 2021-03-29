@@ -29,4 +29,14 @@ public function otdel()
    }
    return false;
    }
+//Обновить
+   public function update(Otdel $otdel, $id)
+   {
+    $otdelName = $this->db->quote($otdel->otdelName);
+     $updateOtdel =   $this->db->query("UPDATE `otdel` SET `otdelName` = $otdelName AND `active` = $otdel->active WHERE `otdel`.`id` = $id;");
+     if($updateOtdel == 1) {
+         return true;
+     }
+     return false;
+   }
 }

@@ -33,7 +33,7 @@ $findProfile = $get->findOtdelById($_GET['id']);
      
         
         
-      <form action="">
+      <form action="change-otdel.php?id=<?=$_GET['id'] ?>" method="post">
       <button class="btn btn-success">Изменить</button>
       </form>
            

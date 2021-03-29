@@ -9,6 +9,10 @@ require_once "../../classes/Gruppa.php";
 require_once "../../BaseMapClass/SpecialMap.php";
 require_once "../../classes/Special.php";
 
+
+
+
+
 // Добавить отдел
 if (isset($_POST['saveOtdel'])) {
     $otdel = new Otdel;

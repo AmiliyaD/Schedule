@@ -26,6 +26,14 @@ class TeacherMap extends BaseMap {
             return $res->fetch(PDO::FETCH_ASSOC);
         }
     }
+      // функция 1.2. Найти профиль одного преподавателя
+      public function findProfileByUserId($id)
+      {
+          $res = $this->db->query("SELECT * FROM teacher INNER JOIN user ON teacher.user_id = user.user_id INNER JOIN gender ON user.gender_id = gender.id INNER JOIN otdel ON otdel.id = teacher.otdel_id INNER JOIN role ON role.id = user.role_id WHERE teacher.user_id = $id");
+          if ($res) {
+              return $res->fetch(PDO::FETCH_ASSOC);
+          }
+      }
     // фунция 2. Сохранить преподавателя
     public function save(User $user, Teacher $teacher)
     {

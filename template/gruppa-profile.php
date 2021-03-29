@@ -34,8 +34,8 @@ $findProfile = $get->findGruppaById($_GET['id']);
      
         
         
-      <form action="">
-      <button class="btn btn-success">Изменить</button>
+      <form action="gruppa-change.php?id=<?=$_GET['id'] ?>" method="post">
+      <button name="changeGruppa" class="btn btn-success">Изменить</button>
       </form>
            
             <?php endif; ?></div>

@@ -33,7 +33,7 @@ $findProfile = $get->findProfileById($_GET['id']);
      
         
         
-      <form action="">
+      <form action="change-student.php?id=<?=$_GET['id'] ?>" method="post">
       <button class="btn btn-success">Изменить</button>
       </form>
            

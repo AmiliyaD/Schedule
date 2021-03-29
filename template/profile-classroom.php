@@ -33,7 +33,7 @@ $findProfile = $get->findClassById($_GET['id']);
      
         
         
-      <form action="">
+      <form action="classroom-change.php?id=<?=$_GET['id'] ?>" method="post">
       <button class="btn btn-success">Изменить</button>
       </form>
            

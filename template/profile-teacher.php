@@ -33,10 +33,11 @@ $findProfile = $get->findProfileById($_GET['id']);
      
         
         
-      <form action="">
+      <form action="change-teacher.php" method="post">
       <button class="btn btn-success">Изменить</button>
       </form>
-           
+        <a class="btn btn-success" href="planAdd.php?id=<?=$findProfile['user_id'] ?>">Добавить пункт в план</a>
+        <a class="btn btn-success" href="planList.php?id=<?=$findProfile['user_id']?>">План преподавателя</a>
             <?php endif; ?></div>
             
             </div>

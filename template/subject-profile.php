@@ -33,7 +33,7 @@ $findProfile = $get->findSubjectById($_GET['id']);
      
         
         
-      <form action="">
+      <form action="change-subject.php?id=<?=$_GET['id'] ?>" method="post">
       <button class="btn btn-success">Изменить</button>
       </form>
            
