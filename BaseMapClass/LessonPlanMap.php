@@ -48,4 +48,13 @@ public function delete($id)
     }
     return false;
 }
+
+public function deleteIfLessonPlanId($lessonPlanId)
+{
+    $delLesson = $this->db->query("DELETE FROM schedule WHERE schedule.lesson_plan_id = $lessonPlanId");
+    if ($delLesson) {
+        return true;
+    }
+    return false;
+}
 }

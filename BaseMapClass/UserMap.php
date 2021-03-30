@@ -2,6 +2,23 @@
 require_once 'BaseMap.php';
 
 class UserMap extends BaseMap {
+const USER = 'user';
+const TEACHER = 'teacher';
+const STUDENT = 'student';
+public function identity($id)
+{
+    if ((new TeacherMap())->findById($id)->validate()) {
+    return self::TEACHER;
+    }
+    if ((new StudentMap())->findProfileById($id)->validate()) {
+    return self::STUDENT;
+    }
+    if ($this->findById($id)->validate()) {
+    return self::USER;
+    }
+    return null;
+}
+
 
 // фукнция 1. АВТОРИЗАЦИЯ ПОЛЬЗОВАТЕЛЯ
 public function auth($login, $password)

@@ -32,6 +32,7 @@ else if ($_POST['login'] && $_POST['password']) {
     }
     if ($return != "ничего нет") {
         $_SESSION['id'] = $return->id;
+        $_SESSION['user_id'] = $return->user_id;
         $_SESSION['role'] = $return->sys_name;
         $_SESSION['roleName'] = $return->name;
         $_SESSION['UserLastName'] = $return->lastname;

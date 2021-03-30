@@ -37,6 +37,7 @@ $findProfile = $get->findProfileById($_GET['id']);
       <button class="btn btn-success">Изменить</button>
       </form>
            
+        <a class="btn btn-success" href="list-studentScheduale.php?idUser=<?=$findProfile['user_id']?>">Расписание студента</a>
             <?php endif; ?></div>
             
             </div>

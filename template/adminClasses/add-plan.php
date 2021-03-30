@@ -7,9 +7,7 @@ $id = Helper::clearInt($_GET['id']);
 }
 if ((new TeacherMap())->findById($id)) {
 $teacher = (new UserMap())->findById($id);
-} else {
-header('Location: 404.php');
-}
+} 
 $header = 'Добавить пункт в план : '.$teacher->fio;
 
 ?>

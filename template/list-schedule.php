@@ -8,9 +8,8 @@ $days = new ScheduleMap;
 $daysSchedules = $days->findByTeacherId($_GET['idUser']);
 
 
-var_dump($daysSchedules);
 ?>
-<?php if($_SESSION['roleName'] == 'Администратор'): ?>
+<?php if($_SESSION['roleName'] == 'Администратор' || $_SESSION['roleName'] == 'Преподаватель'): ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -31,7 +30,7 @@ var_dump($daysSchedules);
                 </div><!-- /.col -->
             </div><!-- /.row -->
             <div class="row md-2">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <table class="table table-bordered table-hover">
 
                         <?php foreach ($daysSchedules as $day) : ?>
@@ -40,12 +39,12 @@ var_dump($daysSchedules);
                                 <h4 class="center-block">
                                     <?=$day['dayName'];?>
 
-                                    <a href="add-schedule.php?idUser=<?=$id;?>&idDay=<?=$day['id'];?>"><i class="fa fa-plus"></i></a>
+                                    <a href="add-schedule.php?id=<?=$_GET['idUser'];?>&idDay=<?=$day['dayId'];?>">add<i class="fa fa-plus"></i></a>
                                 </h4>
                             </th>
                         </tr>
 
-                        <?php if ($day['gruppa']) : ?>
+                        <?php if ($day['gruppa']): ?>
                         <?php foreach ($day['gruppa'] as $gruppa) : ?>
                         <tr>
                             <th colspan="4"><?=$gruppa['gruppaName'];?></th>
@@ -57,7 +56,7 @@ var_dump($daysSchedules);
                             <td><?=$schedule['subject'];?></td>
                             <td><?=$schedule['classroom'];?></td>
 
-                            <td><a href="delete-schedule.php?id=<?=$schedule['schedule_id'];?>&idTeacher=<?=$id;?>"><i class="fa fa-trash"></i></a></td>
+                            <td><a href="adminClasses/delete-schduale.php?id=<?=$schedule['id'];?>&idTeacher=<?=$id;?>">dd<i class="fa fa-trash"></i></a></td>
                         </tr>
 
                         <?php endforeach;?>

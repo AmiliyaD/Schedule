@@ -7,7 +7,7 @@ require_once "incSave.php";
 if (isset($_POST['lesson_plan_id'])) {
 $schedule = new Schedule();
 $schedule->lesson_plan_id = Helper::clearInt($_POST['lesson_plan_id']);
-$schedule->day_id = Helper::clearInt(1);
+$schedule->day_id = Helper::clearInt($_POST['day_id']);
 $schedule->lesson_num_id = Helper::clearInt($_POST['lesson_num_id']);
 $schedule->classroom_id = Helper::clearInt($_POST['classroom_id']);
 $userId = Helper::clearInt($_POST['user_id']);

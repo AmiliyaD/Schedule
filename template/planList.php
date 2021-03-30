@@ -60,16 +60,7 @@ $findProfile = $get->findProfileByUserId($_GET['id']);
     <td><a > <?=$item['subjectName'] ?> </a></td>
     <td><a > <?=$item['hours'] ?> </a></td>
     <td><a href="adminclasses/delete-plan.php?id=<?=$item[0] ?>&user_id=<?=$item['user_id'] ?>">Удалить </a></td>
-    <td><?php if($item['active'] == 1): ?>
-
-   <p> Нет </p>
-
-  <?php endif; ?>
-  <?php if($item['active'] == 0): ?>
-
-   <p> Да </p>
-
-  <?php endif; ?></td>
+    
   </tr>
   
 <?php endforeach; ?>

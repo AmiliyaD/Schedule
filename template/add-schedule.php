@@ -13,7 +13,7 @@ $findProfile = $getTeacher->findProfileByUserId($_GET['id']);
 
 
 ?>  
- <?php if($_SESSION['roleName'] == 'Администратор'): ?>
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -39,14 +39,13 @@ $findProfile = $getTeacher->findProfileByUserId($_GET['id']);
         
 <?php require "adminClasses/add-schedule.php" ?>
            
-            <?php endif; ?>
+   
             
             </div>
             
             </div>
       </div><!-- /.container-fluid -->
     </div>
-    
+    <?php require "footer.php" ?>
   </div>
 
-<?php require "footer.php" ?>

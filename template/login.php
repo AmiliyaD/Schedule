@@ -35,13 +35,13 @@ if ($_SESSION['message']) {
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Авторизируйтесь для начала занятий</p>
+                <p class="login-box-msg">Авторизируйтесь</p>
 <?= $message?>
                 <!-- ФОРМА -->
                 <form action="auth.php" method="post">
                     <div class="input-group mb-3">
                         <!-- логин -->
-                        <input type="text" name="login" class="form-control" placeholder="Email">
+                        <input type="text" name="login" class="form-control" placeholder="Логин">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -50,7 +50,7 @@ if ($_SESSION['message']) {
                     </div>
                     <div class="input-group mb-3">
                         <!-- пароль -->
-                        <input type="password" name="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Пароль">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>

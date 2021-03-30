@@ -13,6 +13,11 @@ public function findProfileById($id)
 {
     return $this->db->query("SELECT * FROM student INNER JOIN user ON student.user_id = user.user_id INNER JOIN role ON user.role_id = role.id INNER JOIN gender ON user.gender_id = gender.id INNER JOIN gruppa ON student.gruppa_id = gruppa.id INNER JOIN special ON gruppa.special_id = special.id WHERE student.student_id = $id")->fetch(PDO::FETCH_ASSOC);
 }    
+// найти студента по  userid
+public function findProfileByUserId($id)
+{
+    return $this->db->query("SELECT * FROM student INNER JOIN user ON student.user_id = user.user_id INNER JOIN role ON user.role_id = role.id INNER JOIN gender ON user.gender_id = gender.id INNER JOIN gruppa ON student.gruppa_id = gruppa.id INNER JOIN special ON gruppa.special_id = special.id WHERE student.user_id = $id")->fetch(PDO::FETCH_ASSOC);
+}    
 
 // Добавить студента
  public function insert(Student $student)

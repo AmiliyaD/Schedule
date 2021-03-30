@@ -18,7 +18,7 @@ $count = $teacher->count();
 
 require 'head.php' ?>
 
-<?php if($_SESSION['roleName'] == 'Администратор'): ?>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper ">
   <!-- Content Header (Page header) -->
@@ -42,11 +42,11 @@ require 'head.php' ?>
       <div class="row md-2">
         <div class="col-md-6">
 
-
+        <?php if($_SESSION['roleName'] == 'Администратор'): ?>
       
 
           <a href="teacherAdd.php" class='btn btn-success'>Добавить нового</a>
-
+          <?php endif; ?>
 
           </div>
       </div>
@@ -93,7 +93,7 @@ require 'head.php' ?>
       </div>
     </div><!-- /.container-fluid -->
   </div>
-  <?php endif; ?>
+
 </div>
 
 <?php require "footer.php" ?>

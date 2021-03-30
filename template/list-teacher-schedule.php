@@ -25,7 +25,7 @@ $get = $gruppa->arrPlans();
           </div><!-- /.col -->
         </div><!-- /.row -->
         <div class="row md-2">
-        <div class="col-md-6">
+        <div class="col-md-12">
         <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
           
@@ -52,7 +52,7 @@ $get = $gruppa->arrPlans();
   <?php foreach($get as $item): ?>
 
     <tr>
-    <td><a href="add-schedule.php?id=<?=$item->user_id ?>"> <?=$item->fio ?> </a></td>
+    <td> <?=$item->fio ?></td>
     <td><a> <?=$item->otdel ?> </a></td>
     <td><a> <?=$item->sum_hours ?> </a></td>
     <td><a> <?=$item->count_plan ?> </a></td>

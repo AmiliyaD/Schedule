@@ -8,7 +8,7 @@ $get = new ClassroomMap;
 $findProfile = $get->findClassById($_GET['id']);
 
 ?>
-   <?php if($_SESSION['roleName'] == 'Администратор'): ?>
+
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -31,7 +31,7 @@ $findProfile = $get->findClassById($_GET['id']);
         <div class="row md-2">
         <div class="col-md-6">
      
-        
+        <?php if($_SESSION['roleName'] == 'Администратор'): ?>
         
       <form action="classroom-change.php?id=<?=$_GET['id'] ?>" method="post">
       <button class="btn btn-success">Изменить</button>

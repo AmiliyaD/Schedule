@@ -8,7 +8,7 @@ $get = new SubjectMap;
 $findProfile = $get->findSubjectById($_GET['id']);
 
 ?>
-   <?php if($_SESSION['roleName'] == 'Администратор'): ?>
+
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -32,7 +32,7 @@ $findProfile = $get->findSubjectById($_GET['id']);
         <div class="col-md-6">
      
         
-        
+        <?php if($_SESSION['roleName'] == 'Администратор'): ?>
       <form action="change-subject.php?id=<?=$_GET['id'] ?>" method="post">
       <button class="btn btn-success">Изменить</button>
       </form>

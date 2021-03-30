@@ -10,23 +10,33 @@ class Helper {
     {
         return (int)$str;
     }
+
+    public static function can($role)
+    {
+        if ($role == $_SESSION['roleName']) {
+            return true;
+        }
+        return false;
+    }
 // ЛУШЧАЯ ФУНКЦИЯ ДЛЯ ВЫВОДА СПИСКА
     public static function printSelectOptions($key, array $options, $nameOpt)
 
     {
         if ($options) {
             foreach ($options as $option) { ?>
-            <option value="<?=$option['id'];?>" <?=($key ==  $option['id'])?'selected':'';?>><?=$option[$nameOpt]?></option>
-            <?php }
+<option value="<?=$option['id'];?>" <?=($key ==  $option['id'])?'selected':'';?>><?=$option[$nameOpt]?></option>
+<?php }
             }
     }
+    // функция для вывода списка для расписания
     public static function printSelectOptionsForSchedule($key, array $options, $nameOne, $nameTwo)
 
     {
         if ($options) {
             foreach ($options as $option) { ?>
-            <option value="<?=$option[0];?>" <?=($key ==  $option['id'])?'selected':'';?>><?=$option[$nameOne]?> -> <?=$option[$nameTwo]?></option>
-            <?php }
+<option value="<?=$option[0];?>" <?=($key ==  $option['id'])?'selected':'';?>><?=$option[$nameOne]?> ->
+    <?=$option[$nameTwo]?></option>
+<?php }
             }
     }
 

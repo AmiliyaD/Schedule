@@ -58,7 +58,7 @@ require_once "../BaseMapClass/Helper.php";
               <li > 
               <p><b> <?=$_SESSION['roleName'] ?></b></p></li>
             <li class="nav-item d-none d-sm-inline-block">
-              <form method="POST" action="adminClasses/secure.php">
+              <form method="POST" action="profile-teacher.php?id=<?=$_SESSION['user_id'] ?>">
 
                 <button type="submit" class="btn btn-
                 light " name="out">Профиль</button>
