@@ -39,7 +39,7 @@ $daysSchedules = $days->getStudentScheduale($_GET['idUser']);
                             <th colspan="4">
                                 <h4 class="center-block">
                                     <?=$days['dayName']?>
-                                    <a href="add-schedule.php?id=<?=$_SESSION['user_id'];?>&idDay=<?=$day['dayId'];?>">add<i class="fa fa-plus"></i></a>
+                                  
                                 </h4>
                             </th>
                         </tr>
@@ -52,7 +52,6 @@ $daysSchedules = $days->getStudentScheduale($_GET['idUser']);
                             <td><?=$days['subjectName'];?></td>
                             <td><?=$days['classroomName'];?></td>
 
-                            <td><a href="adminClasses/delete-schduale.php?id=<?=$days['id'];?>&idTeacher=<?=$id;?>">dd<i class="fa fa-trash"></i></a></td>
                         </tr>
                           <?php endforeach; ?>
                     
